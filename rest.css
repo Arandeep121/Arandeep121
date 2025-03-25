@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    color:#333;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0,0,0.8);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+header h1{
+    margin-bottom: 10px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+nav ul li a.active{
+    color:#ff9800;
+    font-weight: bold;
+    text-decoration: underline;
+}
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#hero h2 {
+    font-size: 3em;
+    text-shadow: 2px 2px 5px black;
+}
+
+#hero p {
+    font-size: 1.5em;
+    background: rgba(0,0,0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    scroll-margin-top: 80px; /*adjust based on navbar height*/
+}
+
+#menu img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#about p {
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 500;
+    color: #555;
+    background: rgba(61, 247, 222, 0.5); /*color for about section (chef's disclaimer)*/
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#about img {
+    width: 400px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+}
+
+/*Dots container*/
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Individual Dots*/
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Active Dot*/
+.dot.active {
+    background-color: #ff9800;
+    transform: scale(1.2);
+}
+
+.slideshow {
+    position: relative;
+    width: 80%;
+    height: 400px;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+}
+
+.slide{
+    width: 100%;
+    height: 100%;  /*add new */
+    object-fit: cover;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+/* endure the first slide is visible */
+.slide.active {
+    display: block;
+}
+
+#contact {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+#contact:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#contact p{
+    font-size: 1.4em;
+    margin: 10px 0;
+    font-weight: bold;
+}
+@media (max-width:768px) {
+    #hero h2 {
+        font-size: 2.5em;
+    }
+    #hero p {
+        font-size: 1.2em;
+
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
